@@ -1,19 +1,9 @@
-import { useFocusEffect } from "@react-navigation/native";
-import { useCallback, useState } from "react";
+import { useState } from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import Modal1 from "../modals/modal1";
 
 export default function Modals() {
-  useFocusEffect(
-    useCallback(() => {
-      console.log("Modals screen rendered");
-
-      return () => {
-        console.log("Modals screen unfocused");
-        return null;
-      };
-    }, [])
-  );
+  console.log("Modals screen rendered");
   const [modalVisible, setModalVisible] = useState(false);
 
   return (
