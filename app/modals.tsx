@@ -1,4 +1,4 @@
-import { Text, View } from "react-native";
+import { Text, TouchableOpacity, View } from "react-native";
 
 export default function Modals() {
   return (
@@ -10,6 +10,9 @@ export default function Modals() {
       }}
     >
       <Text>I'm modal screen</Text>
+      <TouchableOpacity>
+        <Text>Open Modal 1</Text>
+      </TouchableOpacity>
     </View>
   );
 }
