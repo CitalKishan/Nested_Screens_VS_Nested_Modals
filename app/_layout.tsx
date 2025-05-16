@@ -24,6 +24,27 @@ export default function RootLayout() {
           title: "Modals",
         }}
       />
+      <Tabs.Screen
+        name="screens/screen1"
+        options={{
+          title: "Screen 1",
+          href: null,
+        }}
+      />
+      <Tabs.Screen
+        name="screens/screen2"
+        options={{
+          title: "Screen 2",
+          href: null,
+        }}
+      />
+      <Tabs.Screen
+        name="screens/screen3"
+        options={{
+          title: "Screen 3",
+          href: null,
+        }}
+      />
     </Tabs>
   );
 }
