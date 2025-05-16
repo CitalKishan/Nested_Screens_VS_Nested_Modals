@@ -19,20 +19,6 @@ export default function Index() {
       >
         <Text style={styles.buttonText}>Go to Screen 1</Text>
       </TouchableOpacity>
-
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => router.push("/screens/screen2")}
-      >
-        <Text style={styles.buttonText}>Go to Screen 2</Text>
-      </TouchableOpacity>
-
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => router.push("/screens/screen3")}
-      >
-        <Text style={styles.buttonText}>Go to Screen 3</Text>
-      </TouchableOpacity>
     </View>
   );
 }
