@@ -12,6 +12,7 @@ export default function RootLayout() {
             <Ionicons name="layers-outline" size={size} color={color} />
           ),
           title: "Screens",
+          headerShown: false,
         }}
       />
       <Tabs.Screen
@@ -22,6 +23,7 @@ export default function RootLayout() {
             <Ionicons name="copy-outline" size={size} color={color} />
           ),
           title: "Modals",
+          headerShown: false,
         }}
       />
       <Tabs.Screen
@@ -29,6 +31,7 @@ export default function RootLayout() {
         options={{
           title: "Screen 1",
           href: null,
+          headerShown: false,
         }}
       />
       <Tabs.Screen
@@ -36,6 +39,7 @@ export default function RootLayout() {
         options={{
           title: "Screen 2",
           href: null,
+          headerShown: false,
         }}
       />
       <Tabs.Screen
@@ -43,6 +47,7 @@ export default function RootLayout() {
         options={{
           title: "Screen 3",
           href: null,
+          headerShown: false,
         }}
       />
     </Tabs>
