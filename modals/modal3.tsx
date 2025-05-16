@@ -25,7 +25,16 @@ const Modal3 = ({ modal3Visible, modal3OnClose }: Modal3Props) => {
           }}
         >
           <Text style={{ fontSize: 18, marginBottom: 15 }}>Modal 3</Text>
-          <TouchableOpacity onPress={modal3OnClose}>
+          <TouchableOpacity
+            onPress={modal3OnClose}
+            style={{
+              alignSelf: "flex-end",
+              marginTop: 10,
+              backgroundColor: "#ddd",
+              padding: 8,
+              borderRadius: 5,
+            }}
+          >
             <Text>Close</Text>
           </TouchableOpacity>
         </View>
