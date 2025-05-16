@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Text, TouchableOpacity, View } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import Modal1 from "../modals/modal1";
 
 export default function Modals() {
@@ -11,15 +11,17 @@ export default function Modals() {
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
+        gap: 16,
       }}
     >
-      <Text>I'm modal screen</Text>
+      <Text style={styles.heading}>Modals Demo</Text>
       <TouchableOpacity
+        style={styles.button}
         onPress={() => {
           setModalVisible(true);
         }}
       >
-        <Text>Open Modal 1</Text>
+        <Text style={styles.buttonText}>Open Modal 1</Text>
       </TouchableOpacity>
       <Modal1
         modal1Visible={modalVisible}
@@ -28,3 +30,24 @@ export default function Modals() {
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  heading: {
+    fontSize: 24,
+    fontWeight: "bold",
+    marginBottom: 20,
+  },
+  button: {
+    backgroundColor: "#007AFF",
+    paddingVertical: 12,
+    paddingHorizontal: 24,
+    borderRadius: 8,
+    width: 200,
+    alignItems: "center",
+  },
+  buttonText: {
+    color: "white",
+    fontSize: 16,
+    fontWeight: "500",
+  },
+});

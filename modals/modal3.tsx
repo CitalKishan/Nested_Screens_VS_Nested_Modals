@@ -1,4 +1,4 @@
-import { Modal, Text, TouchableOpacity, View } from "react-native";
+import { Modal, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 interface Modal3Props {
   modal3Visible: boolean;
@@ -24,23 +24,39 @@ const Modal3 = ({ modal3Visible, modal3OnClose }: Modal3Props) => {
             width: "80%",
           }}
         >
-          <Text style={{ fontSize: 18, marginBottom: 15 }}>Modal 3</Text>
+          <Text style={styles.heading}>Modal 3</Text>
           <TouchableOpacity
             onPress={modal3OnClose}
-            style={{
-              alignSelf: "flex-end",
-              marginTop: 10,
-              backgroundColor: "#ddd",
-              padding: 8,
-              borderRadius: 5,
-            }}
+            style={[styles.button, { backgroundColor: "#FF3B30" }]}
           >
-            <Text>Close</Text>
+            <Text style={styles.buttonText}>Close</Text>
           </TouchableOpacity>
         </View>
       </View>
     </Modal>
   );
 };
+
+const styles = StyleSheet.create({
+  heading: {
+    fontSize: 24,
+    fontWeight: "bold",
+    marginBottom: 20,
+  },
+  button: {
+    backgroundColor: "#007AFF",
+    paddingVertical: 12,
+    paddingHorizontal: 24,
+    borderRadius: 8,
+    width: "100%",
+    alignItems: "center",
+    marginVertical: 5,
+  },
+  buttonText: {
+    color: "white",
+    fontSize: 16,
+    fontWeight: "500",
+  },
+});
 
 export default Modal3;

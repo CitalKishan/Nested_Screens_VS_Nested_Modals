@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Modal, Text, TouchableOpacity, View } from "react-native";
+import { Modal, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import Modal2 from "./modal2";
 interface Modal1Props {
   modal1Visible: boolean;
@@ -27,30 +27,21 @@ const Modal1 = ({ modal1Visible, modal1OnClose }: Modal1Props) => {
             width: "80%",
           }}
         >
-          <Text style={{ fontSize: 18, marginBottom: 15 }}>Modal 1</Text>
+          <Text style={styles.heading}>Modal 1</Text>
           <TouchableOpacity
             onPress={() => setModal2Visible(true)}
-            style={{
-              alignSelf: "flex-end",
-              marginTop: 10,
-              backgroundColor: "#ddd",
-              padding: 8,
-              borderRadius: 5,
-            }}
+            style={styles.button}
           >
-            <Text>Open Modal 2</Text>
+            <Text style={styles.buttonText}>Open Modal 2</Text>
           </TouchableOpacity>
           <TouchableOpacity
             onPress={modal1OnClose}
-            style={{
-              alignSelf: "flex-end",
-              marginTop: 10,
-              backgroundColor: "#ddd",
-              padding: 8,
-              borderRadius: 5,
-            }}
+            style={[
+              styles.button,
+              { marginTop: 10, backgroundColor: "#FF3B30" },
+            ]}
           >
-            <Text>Close</Text>
+            <Text style={styles.buttonText}>Close</Text>
           </TouchableOpacity>
         </View>
         <Modal2
@@ -61,5 +52,27 @@ const Modal1 = ({ modal1Visible, modal1OnClose }: Modal1Props) => {
     </Modal>
   );
 };
+
+const styles = StyleSheet.create({
+  heading: {
+    fontSize: 24,
+    fontWeight: "bold",
+    marginBottom: 20,
+  },
+  button: {
+    backgroundColor: "#007AFF",
+    paddingVertical: 12,
+    paddingHorizontal: 24,
+    borderRadius: 8,
+    width: "100%",
+    alignItems: "center",
+    marginVertical: 5,
+  },
+  buttonText: {
+    color: "white",
+    fontSize: 16,
+    fontWeight: "500",
+  },
+});
 
 export default Modal1;
