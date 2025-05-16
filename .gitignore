@@ -2,6 +2,8 @@
 
 .cursor
 
+.cursorrules
+
 # dependencies
 node_modules/
 
