@@ -3,6 +3,7 @@ import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import Modal1 from "../modals/modal1";
 
 export default function Modals() {
+  console.log("Modals screen rendered");
   const [modalVisible, setModalVisible] = useState(false);
 
   return (

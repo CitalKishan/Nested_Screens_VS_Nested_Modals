@@ -6,6 +6,7 @@ interface Modal3Props {
 }
 
 const Modal3 = ({ modal3Visible, modal3OnClose }: Modal3Props) => {
+  console.log("Modal 3 rendered");
   return (
     <Modal visible={modal3Visible} animationType="slide" transparent>
       <View

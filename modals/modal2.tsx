@@ -7,6 +7,7 @@ interface Modal2Props {
 }
 
 const Modal2 = ({ modal2Visible, modal2OnClose }: Modal2Props) => {
+  console.log("Modal 2 rendered");
   const [modal3Visible, setModal3Visible] = useState(false);
 
   return (
