@@ -1,8 +1,17 @@
-import { router } from "expo-router";
+import { router, useFocusEffect } from "expo-router";
+import { useCallback } from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 export default function Index() {
-  console.log("----->     Index screen rendered!");
+  useFocusEffect(
+    useCallback(() => {
+      console.log("----->     Index screen rendered");
+      return () => {
+        console.log("----->     Index screen unfocused");
+        return null;
+      };
+    }, [])
+  );
   return (
     <View
       style={{
