@@ -7,7 +7,10 @@ const Screen2 = () => {
       <Text style={styles.title}>Screen 2</Text>
 
       <View style={styles.buttonContainer}>
-        <TouchableOpacity style={styles.button} onPress={() => router.back()}>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => router.push("/screens/screen1")}
+        >
           <Text style={styles.buttonText}>Back</Text>
         </TouchableOpacity>
 

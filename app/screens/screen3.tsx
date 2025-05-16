@@ -6,7 +6,10 @@ const Screen3 = () => {
     <View style={styles.container}>
       <Text style={styles.title}>Screen 3</Text>
 
-      <TouchableOpacity style={styles.button} onPress={() => router.back()}>
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => router.push("/screens/screen2")}
+      >
         <Text style={styles.buttonText}>Back</Text>
       </TouchableOpacity>
     </View>
