@@ -29,18 +29,6 @@ const Modal1 = ({ modal1Visible, modal1OnClose }: Modal1Props) => {
         >
           <Text style={{ fontSize: 18, marginBottom: 15 }}>Modal 1</Text>
           <TouchableOpacity
-            onPress={modal1OnClose}
-            style={{
-              alignSelf: "flex-end",
-              marginTop: 10,
-              backgroundColor: "#ddd",
-              padding: 8,
-              borderRadius: 5,
-            }}
-          >
-            <Text>Close</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
             onPress={() => setModal2Visible(true)}
             style={{
               alignSelf: "flex-end",
@@ -51,6 +39,18 @@ const Modal1 = ({ modal1Visible, modal1OnClose }: Modal1Props) => {
             }}
           >
             <Text>Open Modal 2</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={modal1OnClose}
+            style={{
+              alignSelf: "flex-end",
+              marginTop: 10,
+              backgroundColor: "#ddd",
+              padding: 8,
+              borderRadius: 5,
+            }}
+          >
+            <Text>Close</Text>
           </TouchableOpacity>
         </View>
         <Modal2
