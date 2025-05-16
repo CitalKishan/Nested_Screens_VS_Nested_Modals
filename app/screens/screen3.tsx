@@ -2,6 +2,7 @@ import { router } from "expo-router";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 const Screen3 = () => {
+  console.log("----->     Screen 3 rendered!");
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Screen 3</Text>
